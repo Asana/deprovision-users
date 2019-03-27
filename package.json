@@ -1,0 +1,24 @@
+{
+    "name": "deprovision_inactive",
+    "version": "1.0.0",
+    "description": "A small script which uses the Asana API to remove inactive users from an organization if they haven't logged in for a number of days",
+    "main": "depro-inactive",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Asana/deprovision_inactive.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Asana/deprovision_inactive/issues"
+    },
+    "homepage": "https://github.com/Asana/deprovision_inactive#readme",
+    "dependencies": {
+        "asana": "^0.15.1",
+        "commander": "^2.19.0",
+        "csv-parser": "^1.12.1",
+        "moment": "^2.24.0",
+        "prompt": "^1.0.0",
+        "request-promise": "^4.2.4"
+    }
+}
