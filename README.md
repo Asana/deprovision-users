@@ -21,10 +21,6 @@ To build the binaries, use `npm run build`.
 
 ### Running
 
-There are two ways to run the script:
-
-### 1. Providing options as arguments
-
 You can run the script by setting all required options:
 
 Dry run (displays which users would be deprovisioned):
@@ -35,19 +31,3 @@ Dry run (displays which users would be deprovisioned):
 Actually deprovision those users:
 
 > `node depro-inactive.js --auth <service account token> --csv <csv export url or file path> --organization_id <organization id> --threshold <# of inactive days> --mode action`
-
-### 2. Entering options in response to prompts
-
-Or you can run the script without arguments and simply type in the correct information when prompted:
-
-> `node depro-inactive.js`
-
-Note that this is the same as executing one of the built binaries.
-
-The script will prompt you for the information it needs:
-
-*   Serivce account token
-*   URL or absolute file path to a .csv file
-*   Organization ID
-*   Threshold (number of inactive days we count as being an "inactive")
-*   Mode ("dry" run or "action" run)

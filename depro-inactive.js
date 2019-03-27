@@ -126,7 +126,6 @@ const main = () => {
         .option("-m, --mode ['dry' or 'action']", "mode to run the script in")
         .parse(process.argv);
 
-    if (commander.rawArgs.length > 2) {
         // We've been given options, lets check those and then process those through
         if (!commander.auth) {
             console.log("Please set the `--auth` option with a service account token");
@@ -153,47 +152,6 @@ const main = () => {
         }
 
         processInputs(commander);
-    } else {
-        // If we have no options, prompt the user for the inputs we need.
-        const schema = {
-            properties: {
-                auth: {
-                    message: "please enter a valid service account token",
-                    pattern: /^0\//,
-                    required: true
-                },
-                csv: {
-                    message: "absolute path or url to csv file",
-                    required: true
-                },
-                organization_id: {
-                    message: "please enter a valid organization id",
-                    pattern: /^[1-9]\d*$/,
-                    required: true
-                },
-                threshold: {
-                    message: "number of days inactive",
-                    required: true
-                },
-                mode: {
-                    message: "mode (dry or action)",
-                    required: false
-                }
-            }
-        };
-
-        // 2. Prompt user for inputs
-        prompt.colors = false;
-        prompt.message = "";
-        prompt.start();
-
-        prompt.get(schema, (err, inputs) => {
-            if (err) {
-                throw err;
-            }
-            processInputs(inputs);
-        });
-    }
 };
 
 main();
