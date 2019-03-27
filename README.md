@@ -18,9 +18,12 @@ You can run the script by setting all required options:
 
 Dry run (displays which users would be deprovisioned):
 
-> `node depro-inactive.js --auth <service account token> --csv <csv export url or file path>
-> --guest-only <yes/no> --organization_id <organization id> --threshold <# of inactive days>`
+```sh
+node depro-inactive.js --auth <service account token> --csv <csv export url or file path> --organization_id <organization id> --threshold <# of inactive days>
+```
 
 Actually deprovision those users:
 
-> `node depro-inactive.js --auth <service account token> --csv <csv export url or file path> --organization_id <organization id> --threshold <# of inactive days> --mode action`
+```sh
+node depro-inactive.js --auth <service account token> --csv <csv export url or file path> --organization_id <organization id> --threshold <# of inactive days> --mode action
+```
