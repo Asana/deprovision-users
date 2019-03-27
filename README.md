@@ -2,17 +2,10 @@
 
 A small node script which uses the Asana API to remove external users (ie without a company email) from an organization if they haven't logged in for set number of days.
 
-## To Develop
-
+## To Run
 *   Install node
 *   Clone this repository
 *   Run `npm install`
-
-To test, run `npm run test`.
-
-To build the binaries, use `npm run build`.
-
-## To Run
 
 ### Prerequisites
 
